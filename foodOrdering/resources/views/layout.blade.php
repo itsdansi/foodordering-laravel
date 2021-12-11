@@ -8,12 +8,23 @@
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
+     <!-- bootstrap cdn link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-
+    zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script> -->
+
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
 
+      
 </head>
 <body>
     
@@ -24,20 +35,24 @@
     <a href="#" class="logo"><i class="fas fa-utensils"></i>foodiz</a>
 
     <nav class="navbar">
-        <a class="active" href="#home">home</a>
-        <a href="#gallary">gallary</a>
-        <a href="#reservation">reservation</a>
-        <a href="#event">events</a>
-        <a href="#about">about</a>
-        <a href="#contact">contact</a>
-        <a href="#account">account</a>
+        <a class="active" href="/">home</a>
+        <a class="menu" href="/menu">menu</a>
+        <a href="/gallary">gallary</a>
+        <a href="/reservation">reservation</a>
+        <a href="/events">events</a>
+        <a href="/about">about</a>
+        <a href="/contact">contact</a>
+        <!-- <a href="/account">account</a> -->
     </nav>
 
     <div class="icons">
         <i class="fas fa-bars" id="menu-bars"></i>
-        <i class="fas fa-search" id="search-icon"></i>
-        <!-- <a href="#" class="fas fa-heart"></a> -->
-        <a href="#" class="fas fa-shopping-cart"></a>
+        <button>  <a href="/account">account</a></button>
+       
+
+        <!-- <i class="fas fa-search" id="search-icon"></i>
+        <a href="#" class="fas fa-heart"></a> -->
+        <!-- <a href="#" class="fas fa-shopping-cart"></a> -->
     </div>
 
 </header>
@@ -52,7 +67,7 @@
     <i class="fas fa-times" id="close"></i>
 </form>
 
-@yield('home')
+@yield('content')
 
 <!-- footer section starts  -->
 
@@ -113,10 +128,10 @@
 <!-- footer section ends -->
 
 <!-- loader part  -->
-<div class="loader-container">
+<!-- <div class="loader-container">
     <img src="images/loader.gif" alt="">
 </div>
-
+ -->
 
 
 

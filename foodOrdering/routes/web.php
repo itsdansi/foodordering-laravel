@@ -17,6 +17,30 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::redirect('/home', '/');
+
+Route::get('/menu', function () {
+    return view('menu');
+});
+
+Route::get('/reservation', function () {
+    return view('reservation');
+});
+
+Route::view('/events', 'events');
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/gallary', function () {
+    return view('gallary');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
 
 
 // Admin Routes
