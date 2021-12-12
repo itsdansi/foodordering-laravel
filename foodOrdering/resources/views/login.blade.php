@@ -51,7 +51,7 @@ button {
 	background-color: #192A56;
     align-items: right;
 	color: #FFFFFF;
-    margin-top: 40px;
+    margin-top: 0px;
 	font-size: 12px;
 	font-weight: bold;
 	padding: 12px 45px;
@@ -112,7 +112,7 @@ input {
 <body>
 	<div class="container" id="container">
 		<div class="form-container log-in-container">
-			<form action="#">
+			<form action="admin/dashboard">
 				<h1>LOGIN</h1>	
 				<span>Please enter your credential to proceed.</span>
 				<input type="email" placeholder="Email" />

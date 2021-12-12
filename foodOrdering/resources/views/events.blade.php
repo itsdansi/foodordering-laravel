@@ -2,6 +2,7 @@
 
 
 @section('content')
+<div class = "container">
 <div class="card mb-12" style="max-width: 540px;">
   <div class="row g-0">
     <div class="col-md-12">
@@ -87,7 +88,6 @@
     </div>
   </div>
 </div>
-
-
+</div>
 
 @endsection

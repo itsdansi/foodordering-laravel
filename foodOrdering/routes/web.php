@@ -55,5 +55,6 @@ Route::get('/register', function () {
 
 
 
+
 // Admin Routes
 Route::get('/admin/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
