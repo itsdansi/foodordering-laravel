@@ -140,81 +140,9 @@
           </div><!-- component-item -->
 
         </div><!-- az-content-left -->
-        <div class="az-content-body pd-lg-l-40 d-flex flex-column">
-          <div class="az-content-breadcrumb">
-            <span>Components</span>
-            <span>Tables</span>
-            <span>Basic Tables</span>
-          </div>
-
-          <hr class="mg-y-30">
-
-          <div class="az-content-label mg-b-5">Product list</div>
-          <p class="mg-b-20">To enable a hover state on table rows.</p>
-
-          <div class="table-responsive">
-            <table class="table table-hover mg-b-0">
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Name</th>
-                  <th>Position</th>
-                  <th>Salary</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Tiger Nixon</td>
-                  <td>System Architect</td>
-                  <td>$320,800</td>
-                  <td><i class="fas fa-edit" style="color:Green" ></i>&nbsp &nbsp &nbsp<i class="fas fa-trash-alt" style="color:Red"></i> </td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Garrett Winters</td>
-                  <td>Accountant</td>
-                  <td>$170,750</td>
-                  <td><i class="fas fa-edit" style="color:Green" ></i>&nbsp &nbsp &nbsp<i class="fas fa-trash-alt" style="color:Red"></i> </td>
-
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Ashton Cox</td>
-                  <td>Junior Technical Author</td>
-                  <td>$86,000</td>
-                  <td><i class="fas fa-edit" style="color:Green" ></i>&nbsp &nbsp &nbsp<i class="fas fa-trash-alt" style="color:Red"></i> </td>
-
-                </tr>
-                <tr>
-                  <th scope="row">4</th>
-                  <td>Cedric Kelly</td>
-                  <td>Senior Javascript Developer</td>
-                  <td>$433,060</td>
-                  <td><i class="fas fa-edit" style="color:Green" ></i>&nbsp &nbsp &nbsp<i class="fas fa-trash-alt" style="color:Red"></i> </td>
-
-                </tr>
-                <tr>
-                  <th scope="row">5</th>
-                  <td>Airi Satou</td>
-                  <td>Accountant</td>
-                  <td>$162,700</td>
-                  <td><i class="fas fa-edit" style="color:Green" ></i>&nbsp &nbsp &nbsp<i class="fas fa-trash-alt" style="color:Red"></i> </td>
-
-                </tr>
-              </tbody>
-            </table>
-          </div><!-- table-responsive -->
-
-          <div class="ht-40"></div>
-
-          <div class="az-footer mg-t-auto">
-            <div class="container">
-              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © cryptictechnologies.com 2020</span>
-            </div><!-- container -->
-          </div><!-- az-footer -->
-        </div><!-- az-content-body -->
+        
+        @yield('content')
+        
       </div><!-- container -->
     </div><!-- az-content -->
 

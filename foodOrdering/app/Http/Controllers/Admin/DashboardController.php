@@ -9,7 +9,7 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        return view('components.admin.layout');
+        return view('components.admin.product.index');
     }
 }
     
