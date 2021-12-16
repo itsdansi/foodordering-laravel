@@ -35,7 +35,7 @@
                   <td>{{$product->product_name}}</td>
                   <td>{{$product->product_desc}}</td>
                   <td>{{$product->category_id}}</td>
-                  <td>{{$product->product_name}}</td>
+                  <td>{{$product->price}}</td>
                   <td>{{$product->product_image}}</td>
                   <td><a href="/admin/products/edit/{{ $product->id }}"><i class="fas fa-edit" style="color:Green"  ></i></a> &nbsp &nbsp &nbsp <a href="/admin/products/destroy/{{ $product->id }}"><i class="fas fa-trash-alt" style="color:Red"></i></a> </td>
                 </tr>

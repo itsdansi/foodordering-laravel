@@ -86,7 +86,7 @@ Route::get('/admin/events/edit/{event}', [App\Http\Controllers\Admin\EventContro
 Route::post('/admin/events/update/{event}', [App\Http\Controllers\Admin\EventController::class, 'update'])->name('event_update');
 Route::get('/admin/events/destroy/{event}', [App\Http\Controllers\Admin\EventController::class, 'destroy']);
 
-Route::get('/admin/galleries', [App\Http\Controllers\Admin\GalleryController::class, 'index'])->name('gallery_list');
+Route::get('/admin/galleries', [App\Http\Controllers\Admin\GalleryController::class, 'index'])->name('event_list');
 Route::get('/admin/galleries/create', [App\Http\Controllers\Admin\GalleryController::class, 'create']);
 Route::post('/admin/galleries/store', [App\Http\Controllers\Admin\GalleryController::class, 'store']);
 Route::get('/admin/galleries/edit/{gallery}', [App\Http\Controllers\Admin\GalleryController::class, 'edit']);
@@ -95,3 +95,15 @@ Route::get('/admin/galleries/destroy/{gallery}', [App\Http\Controllers\Admin\Gal
 
 
 Route::get('/admin/users', [App\Http\Controllers\Admin\UserController::class, 'index']);
+
+
+Route::get('/welcome', function () {
+        return view('welcome');
+    });
+    
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->middleware(['auth'])->name('dashboard');
+    
+    require __DIR__.'/auth.php';
+    

@@ -21,7 +21,7 @@
                         <!-- style = "border-color:red" -->
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
-                        </span>
+                        </span> 
                     
                     @enderror <br>
 

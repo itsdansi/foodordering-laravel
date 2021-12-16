@@ -95,15 +95,19 @@
                 <div class="az-img-user">
                   <img src="/admin/img/faces/face1.jpg" alt="">
                 </div><!-- az-img-user -->
-                <h6>Aziana Pechon</h6>
-                <span>Premium Member</span>
+                <h6>{{ Auth::user()->name }}</h6>
+                <span>Admin Member</span>
               </div><!-- az-header-profile -->
 
               <a href="" class="dropdown-item"><i class="typcn typcn-user-outline"></i> My Profile</a>
               <a href="" class="dropdown-item"><i class="typcn typcn-edit"></i> Edit Profile</a>
               <a href="" class="dropdown-item"><i class="typcn typcn-time"></i> Activity Logs</a>
               <a href="" class="dropdown-item"><i class="typcn typcn-cog-outline"></i> Account Settings</a>
-              <a href="/login" class="dropdown-item"><i class="typcn typcn-power-outline"></i> Sign Out</a>
+              <form method = "POST" action = "{{route('logout')}}">
+                @csrf
+              <a href="{{route('logout')}}" class="dropdown-item" onclick = "event.preventDefault();
+              this.closest('form').submit();"><i class="typcn typcn-power-outline"></i> Sign Out</a>
+              </form> 
             </div><!-- dropdown-menu -->
           </div>
         </div><!-- az-header-right -->
