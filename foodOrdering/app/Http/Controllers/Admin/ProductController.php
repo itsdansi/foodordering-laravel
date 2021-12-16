@@ -41,11 +41,29 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'product_name' => 'required|unique:products|max:255',
+            'product_desc' => 'required',
+            'price' => 'required | numeric',
+            'category_id' => 'required',
+            'product_image' => 'required|unique:products|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+         
+        ]);
+        if($request->hasFile('product_image') )
+        {
+            // $name=time().'.'.$request->product_image->getClientOriginalName();
+            $path = $request->file('product_image')->store('public/product_images');
+            // $product->product_image = $name;
+        }
+     
+
         $product = new Product;
         $product->product_name = $request->product_name;
         $product->price = $request->price;
         $product->product_desc = $request->product_desc;
         $product->category_id = $request->category_id;
+        $product->product_image = $path;
+        // return $product;
         if($product->save())
         {
             return redirect()->route('product_list')->with('success','Product Added Successfully');

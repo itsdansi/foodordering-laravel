@@ -86,5 +86,12 @@ Route::get('/admin/events/edit/{event}', [App\Http\Controllers\Admin\EventContro
 Route::post('/admin/events/update/{event}', [App\Http\Controllers\Admin\EventController::class, 'update'])->name('event_update');
 Route::get('/admin/events/destroy/{event}', [App\Http\Controllers\Admin\EventController::class, 'destroy']);
 
+Route::get('/admin/galleries', [App\Http\Controllers\Admin\GalleryController::class, 'index'])->name('gallery_list');
+Route::get('/admin/galleries/create', [App\Http\Controllers\Admin\GalleryController::class, 'create']);
+Route::post('/admin/galleries/store', [App\Http\Controllers\Admin\GalleryController::class, 'store']);
+Route::get('/admin/galleries/edit/{gallery}', [App\Http\Controllers\Admin\GalleryController::class, 'edit']);
+Route::post('/admin/galleries/update/{gallery}', [App\Http\Controllers\Admin\GalleryController::class, 'update'])->name('gallery_update');
+Route::get('/admin/galleries/destroy/{gallery}', [App\Http\Controllers\Admin\GalleryController::class, 'destroy']);
+
 
 Route::get('/admin/users', [App\Http\Controllers\Admin\UserController::class, 'index']);
