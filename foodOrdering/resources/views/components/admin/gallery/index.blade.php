@@ -4,15 +4,15 @@
 <div class = "container">
 <div class="az-content-body pd-lg-l-40 d-flex flex-column">
           <div class="az-content-breadcrumb">
-            <span>Components</span>
-            <span>Tables</span>
-            <span>Basic Tables</span>
+            <span>Admin</span>
+            <span>Data</span>
+            <span>Gallery</span>
           </div>
 
           <hr class="mg-y-30">
 
           <div class="az-content-label mg-b-5">Gallery list</div>
-          <a href="/admin/galleries/create"> <button class="btn btn-outline-secondary float-right mg-b-40"  type="button" >Create new category</button></a>
+          <a href="/admin/galleries/create"> <button class="btn btn-outline-secondary float-right mg-b-40"  type="button" >Create new gallery</button></a>
 
 
           <div class="table-responsive">

@@ -17,7 +17,7 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::latest()->get();
-        return view('components.admin.product.index',['products'=> $products]);
+        return view('components.admin.product.index',['products'=> $products, 'categories'=> Category::all()]);
         // return $products;
     }
 

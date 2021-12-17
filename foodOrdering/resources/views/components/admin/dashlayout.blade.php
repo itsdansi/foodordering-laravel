@@ -120,27 +120,22 @@
           <div class="component-item">
             <label>Products</label>
             <nav class="nav flex-column">
-              <a href="#" class="nav-link">Butter Pizza</a>
-              <a href="#" class="nav-link">Chicken Pizza</a>
-              <a href="#" class="nav-link">Mushroom Pizza</a>
-              <a href="#" class="nav-link">Veg Momo</a>
+              <a href="{{route('product_list')}}" class="nav-link"><i class="typcn typcn-clipboard"></i> All Products</a>
             </nav>
             <label>Categories</label>
             <nav class="nav flex-column">
-              <a href="#" class="nav-link">Dry foods</a>
-              <a href="#" class="nav-link">Spicy foods</a>
-              <a href="#" class="nav-link">Beverages</a>
+              <a href="{{route('category_list')}}" class="nav-link"><i class="typcn typcn-book"></i> All Categories</a>
             </nav>
+
+            <label>Events</label>
             <nav class="nav flex-column">
-              <a href="#" class="nav-link">Butter Pizza</a>
-              <a href="#" class="nav-link">Chicken Pizza</a>
-              <a href="#" class="nav-link">Mushroom Pizza</a>
-              <a href="#" class="nav-link">Veg Momo</a>
+              <a href="{{route('event_list')}}" class="nav-link"><i class="typcn typcn-time"></i> All Events</a>
             </nav>
-            <label>Others</label>
+            <label>Galleries</label>
             <nav class="nav flex-column">
-              <a href="chart-chartjs.html" class="nav-link">Spicy foods</a>
+              <a href="{{route('gallery_list')}}" class="nav-link"><i class="typcn typcn-image"></i> All Galleries</a>
             </nav>
+            
           </div><!-- component-item -->
 
         </div><!-- az-content-left -->

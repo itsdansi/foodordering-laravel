@@ -44,7 +44,6 @@ class CategoryController extends Controller
     {
         $request->validate([
             'category_name' => 'required|unique:categories|max:255',
-            'category_image' => 'required',
             'category_desc' => 'required',
          
         ]);

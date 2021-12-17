@@ -111,22 +111,22 @@ class EventController extends Controller
             'event_date' => 'required',
             'event_time' => 'required',
             'event_location' => 'required',
-            'event_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+            // 'event_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
          
         ]);
-        if($request->hasFile('event_image') )
-        {
-            // $name=time().'.'.$request->event_image->getClientOriginalName();
-            $path = $request->file('event_image')->store('public/event_images');
-            // $event->event_image = $name;
-        }
+        // if($request->hasFile('event_image') )
+        // {
+        //     // $name=time().'.'.$request->event_image->getClientOriginalName();
+        //     $path = $request->file('event_image')->store('public/event_images');
+        //     // $event->event_image = $name;
+        // }
      
         $event->event_name = $request->event_name;
         $event->event_desc = $request->event_desc;
         $event->event_date = $request->event_date;
         $event->event_time = $request->event_time;
         $event->event_location = $request->event_location;
-        $event->event_image = $path;
+        // $event->event_image = $path;
 
         // return $event;
         

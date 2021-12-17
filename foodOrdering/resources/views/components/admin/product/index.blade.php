@@ -3,10 +3,10 @@
 @section('content')
 <div class = "container">
 <div class="az-content-body pd-lg-l-40 d-flex flex-column">
-          <div class="az-content-breadcrumb">
-            <span>Components</span>
-            <span>Tables</span>
-            <span>Basic Tables</span>
+<div class="az-content-breadcrumb">
+            <span>Admin</span>
+            <span>Data</span>
+            <span>Product</span>
           </div>
 
           <hr class="mg-y-30">
