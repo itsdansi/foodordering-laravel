@@ -1,6 +1,6 @@
-@extends('layout')
+@extends('home')
 
-@section('content')
+@section('menu')
 
 <section class="dishes" id="dishes">
 

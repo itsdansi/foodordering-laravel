@@ -24,8 +24,6 @@
        <img src="https://source.unsplash.com/random/205" data-target="#indicators" data-slide-to="4" alt="" />
   </div>
 </div>
-
-Modal
  <div class="modal fade" id="lightbox" role="dialog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
