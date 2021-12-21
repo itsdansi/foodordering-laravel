@@ -15,7 +15,8 @@ use App\Models\Product;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $products = Product::latest()->get();
+    return view('home', ['products' => $products]);
 });
 
 Route::redirect('/home', '/');
@@ -63,16 +64,21 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
     
     
 
+// Routes for order processing
+Route::resource('/order', App\Http\Controllers\OrderController::class);
+Route::post('/cart', [App\Http\Controllers\OrderItemController::class, 'store']) -> name('add_to_cart')->middleware(['auth']);
 
 // Admin Routes
+Route::middleware(['auth'])->group( function(){ 
+
 Route::get('/admin/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
 
 Route::get('/admin/products', [App\Http\Controllers\Admin\ProductController::class, 'index'])->name('product_list');
@@ -106,6 +112,6 @@ Route::get('/admin/galleries/destroy/{gallery}', [App\Http\Controllers\Admin\Gal
 
 Route::get('/admin/users', [App\Http\Controllers\Admin\UserController::class, 'index']);
 
+});
 
-
-    
+        

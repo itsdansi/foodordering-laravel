@@ -64,12 +64,15 @@
     <h1 class="heading"> popular dishes </h1>
 
     <div class="box-container">
+    
+    @foreach($products as $product)
 
         <div class="box">
             <!-- <a href="#" class="fas fa-heart"></a>
             <a href="#" class="fas fa-eye"></a> -->
             <img src="images/dish-1.png" alt="">
-            <h3>tasty food</h3>
+            <h3>{{$product->product_name}}</h3>
+            <h5>{{$product->product_desc}}</h3>
             <!-- <div class="stars">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -77,94 +80,21 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div> -->
-            <span>$15.99</span>
-            <a href="#" class="btn">ORDER NOW</a>
+            <span>{{$product->price}}</span>
+            <form action="{{ route('add_to_cart') }}" method = "POST">
+                @csrf
+                <input type="hidden" name="product_id" value ="{{$product->id}}">
+                <input type="hidden" name="quantity" value ="1">
+                <a href="#" class="btn" onclick ="event.preventDefault(); this.closest('form').submit();">Add to cart</a>
+            </form>
         </div>
 
-        <div class="box">
-            <!-- <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a> -->
-            <img src="images/dish-2.png" alt="">
-            <h3>tasty food</h3>
-            <!-- <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div> -->
-            <span>$15.99</span>
-            <a href="#" class="btn">ORDER NOW</a>
-        </div>
-
-        <div class="box">
-            <!-- <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a> -->
-            <img src="images/dish-3.png" alt="">
-            <h3>tasty food</h3>
-            <!-- <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div> -->
-            <span>$15.99</span>
-            <a href="#" class="btn">ORDER NOW</a>
-        </div>
-
-        <div class="box">
-            <!-- <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a> -->
-            <img src="images/dish-4.png" alt="">
-            <h3>tasty food</h3>
-            <!-- <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div> -->
-            <span>$15.99</span>
-            <a href="#" class="btn">ORDER NOW</a>
-        </div>
-
-        <div class="box">
-            <!-- <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a> -->
-            <img src="images/dish-5.png" alt="">
-            <h3>tasty food</h3>
-            <!-- <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div> -->
-            <span>$15.99</span>
-            <a href="#" class="btn">ORDER NOW</a>
-        </div>
-
-        <div class="box">
-            <!-- <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a> -->
-            <img src="images/dish-6.png" alt="">
-            <h3>tasty food</h3>
-            <!-- <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div> -->
-            <span>$15.99</span>
-            <a href="#" class="btn">ORDER NOW</a>
-        </div>
+    @endforeach
 
     </div>
 
 </section>
-
+)
 <!-- dishes section ends -->
 
 <!-- about section starts  -->
